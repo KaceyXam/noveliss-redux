@@ -5,9 +5,9 @@ export default function Home() {
 	return (
 		<>
 			<Head>
-				<title>Noveliss | Home</title>
+				<title>Noveliss | About</title>
 			</Head>
-			<MainLayout>Home Page</MainLayout>
+			<MainLayout>About Page</MainLayout>
 		</>
 	);
 }
