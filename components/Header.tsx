@@ -16,7 +16,6 @@ export default function Header() {
 	const handleScroll = () => {
 		const position = window.scrollY;
 		setScrollPos(position);
-		console.log(position);
 	};
 
 	useEffect(() => {
@@ -26,10 +25,6 @@ export default function Header() {
 			window.removeEventListener("scroll", handleScroll);
 		};
 	});
-
-	useEffect(() => {
-		console.log(mousePosX);
-	}, [mousePosX]);
 
 	return (
 		<>
