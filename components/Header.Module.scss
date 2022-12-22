@@ -32,11 +32,11 @@
 	justify-content: center;
 	list-style: none;
 	gap: 0.1em;
-	font-size: 22px;
+	font-size: 18px;
 }
 
 .navElement {
-	padding: 1em;
+	padding: 1.5em 1em;
 	:where(a) {
 		color: inherit;
 	}
