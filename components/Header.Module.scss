@@ -32,13 +32,17 @@
 	justify-content: center;
 	list-style: none;
 	gap: 0.1em;
-	font-size: 18px;
+	font-size: 20px;
+	padding-inline: 4rem;
 }
 
 .navElement {
-	padding: 1.5em 1em;
+	padding: 1.5rem 1rem;
 	:where(a) {
-		color: inherit;
+		color: #ccc;
+		&:hover {
+			color: rgb(255, 255, 255);
+		}
 	}
 	a {
 		font-weight: 600;
@@ -48,4 +52,8 @@
 			color: vars.$active-nav-link;
 		}
 	}
+}
+
+.logoSvg {
+	margin-right: auto;
 }
