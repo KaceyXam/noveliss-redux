@@ -7,10 +7,25 @@ export default function Header() {
 	const router = useRouter();
 
 	const [mousePosX, setMousePosX] = useState(0);
+	const [scrollPos, setScrollPos] = useState(0);
 
 	const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
 		setMousePosX(() => e.nativeEvent.clientX);
 	};
+
+	const handleScroll = () => {
+		const position = window.scrollY;
+		setScrollPos(position);
+		console.log(position);
+	};
+
+	useEffect(() => {
+		window.addEventListener("scroll", handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener("scroll", handleScroll);
+		};
+	});
 
 	useEffect(() => {
 		console.log(mousePosX);
@@ -18,7 +33,16 @@ export default function Header() {
 
 	return (
 		<>
-			<nav className={styles.mainNav}>
+			<nav
+				className={styles.mainNav}
+				style={
+					{
+						"--shadow-color": `${
+							scrollPos >= 100 ? "#10101090" : "transparent"
+						}`,
+					} as React.CSSProperties
+				}
+			>
 				<ul className={styles.navList}>
 					<li className={styles.navElement}>
 						<Link
