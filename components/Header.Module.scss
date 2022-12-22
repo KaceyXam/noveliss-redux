@@ -56,4 +56,13 @@
 
 .logoSvg {
 	margin-right: auto;
+	svg {
+		fill: #ccc;
+		transition: fill 125ms ease-in-out;
+	}
+	&:hover {
+		svg {
+			fill: white;
+		}
+	}
 }
