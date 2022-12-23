@@ -31,3 +31,24 @@ select {
 	font: inherit;
 }
 /* end css reset */
+
+.a_button {
+	font: inherit;
+	text-decoration: none;
+	color: #252525;
+	font-weight: 600;
+	background-color: #f7f7f7;
+	width: fit-content;
+	padding: 0.5em 1em;
+	border: #252525 solid 1px;
+	border-radius: 0.5em;
+	cursor: pointer;
+	transition: all 75ms ease-in-out;
+	&.disabled {
+		cursor: disabled;
+	}
+	&:hover {
+		background-color: #252525;
+		color: #f7f7f7;
+	}
+}
