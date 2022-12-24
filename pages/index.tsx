@@ -2,6 +2,7 @@ import Head from "next/head";
 import MainLayout from "../components/layouts/MainLayout";
 import styles from "./Home.module.scss";
 import Image from "next/image";
+import LatestVideo from "../components/LatestVideo";
 
 export default function Home() {
 	return (
@@ -10,6 +11,7 @@ export default function Home() {
 				<title>Noveliss | Home</title>
 			</Head>
 			<MainLayout>
+				<LatestVideo />
 				<main className={styles.mainSection}>
 					<section className={styles.latest}>
 						<Image
