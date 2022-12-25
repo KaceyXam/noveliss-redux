@@ -5,14 +5,15 @@
 	margin-inline: auto;
 	gap: 6rem;
 	margin-block: 4rem;
-	:nth-child(odd):not(.latest *) {
+	:nth-child(odd):not(div, h2, h3, a) {
 		align-self: flex-start;
 	}
-	:nth-child(even):not(.latest *) {
+	:nth-child(even):not(div, h2, h3, a) {
 		align-self: flex-end;
 		flex-direction: row-reverse;
-		.latestTitle {
+		* {
 			align-items: end;
+			text-align: end;
 		}
 	}
 }

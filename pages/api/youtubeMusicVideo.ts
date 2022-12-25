@@ -10,9 +10,10 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
 	const json = await response.json();
 	// const latestVideoTitle = json.items[0].snippet.title;
-	const title = json.items[0].snippet.title;
-	console.log(json);
+	const jsonSnippet = json.items[0].snippet;
 	return res.status(200).json({
-		title,
+		title: jsonSnippet.title,
+		thumbnail: jsonSnippet.thumbnails.maxres.url,
+		url: `https://www.youtube.com/watch?v=${jsonSnippet.resourceId.videoId}`,
 	});
 };
