@@ -1,11 +1,14 @@
 @use "../styles/globalvars.scss" as vars;
 
 .formsWrapper {
-	margin-block: 4em;
+	margin-block: 6em 8em;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	gap: clamp(4rem, 10%, 16rem);
+	button {
+		margin-block: 1.5em;
+	}
 }
 
 .formsWrapper h2 {
@@ -15,6 +18,7 @@
 
 .contactForm {
 	display: flex;
+	gap: 0.2em;
 	flex-direction: column;
 	min-width: 350px;
 	width: 50%;
