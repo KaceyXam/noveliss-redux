@@ -5,7 +5,12 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 4rem;
+	gap: clamp(4rem, 10%, 16rem);
+}
+
+.formsWrapper h2 {
+	font-size: 32px;
+	font-weight: bold;
 }
 
 .contactForm {
@@ -16,8 +21,6 @@
 	max-width: 550px;
 	h2 {
 		text-align: center;
-		font-size: 32px;
-		font-weight: bold;
 	}
 	label {
 		font-size: 1.3rem;
@@ -41,12 +44,21 @@
 		height: 16rem;
 	}
 	[type="submit"] {
-		margin-block: 1.5em;
-		padding: 0.5em 1em;
-		border: vars.$border-grey solid 2px;
-		border-radius: 0.5em;
-		font-weight: 600;
 		max-width: 60%;
-		cursor: pointer;
 	}
+}
+
+.donate {
+	max-width: 400px;
+	text-align: center;
+	button {
+		width: 60%;
+	}
+}
+
+.imageWrapper {
+	width: 100%;
+	position: relative;
+	aspect-ratio: 1 / 1;
+	margin-block: 1em;
 }
