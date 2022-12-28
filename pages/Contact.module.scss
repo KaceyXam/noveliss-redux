@@ -1,0 +1,52 @@
+@use "../styles/globalvars.scss" as vars;
+
+.formsWrapper {
+	margin-block: 4em;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.contactForm {
+	display: flex;
+	flex-direction: column;
+	min-width: 350px;
+	width: 50%;
+	max-width: 550px;
+	h2 {
+		text-align: center;
+		font-size: 32px;
+		font-weight: bold;
+	}
+	label {
+		font-size: 1.3rem;
+		font-weight: 500;
+		margin-top: 0.5em;
+	}
+	input,
+	textarea {
+		margin-block: 0.25em;
+		padding: 0.5em 0.75em;
+		border: vars.$border-grey solid 2px;
+		border-radius: 0.25em;
+		background-color: vars.$light-grey;
+		&:focus {
+			outline: solid 2px vars.$active-selection;
+			outline-offset: 2px;
+		}
+	}
+	textarea {
+		resize: none;
+		height: 16rem;
+	}
+	[type="submit"] {
+		margin-block: 1.5em;
+		padding: 0.5em 1em;
+		border: vars.$border-grey solid 2px;
+		border-radius: 0.5em;
+		font-weight: 600;
+		max-width: 60%;
+		cursor: pointer;
+	}
+}
