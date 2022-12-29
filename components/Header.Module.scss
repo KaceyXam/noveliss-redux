@@ -1,7 +1,7 @@
 @use "../styles/globalvars.scss" as vars;
 
 .wrapper {
-	// TODO Parallax Header
+	// TODO Hero Element
 }
 
 .mainNav {
@@ -37,7 +37,7 @@
 }
 
 .navElement {
-	padding: 1.5rem 1rem;
+	padding: 1.25em 0.75em;
 	:where(a) {
 		color: #ccc;
 		&:hover {
@@ -63,6 +63,46 @@
 	&:hover {
 		svg {
 			fill: white;
+		}
+	}
+}
+
+.dropBtn {
+	display: none;
+}
+
+@media (max-width: 1200px) {
+	.navList {
+		padding-inline: 1em;
+	}
+	.navElement {
+		padding: 1em 0.5em;
+	}
+}
+
+@media (max-width: 900px) {
+	.navElement {
+		display: none;
+	}
+
+	.logoSvg {
+		padding-block: 0.5em;
+	}
+
+	.dropBtn {
+		display: block;
+		.hamburger {
+			padding: 0;
+			min-width: auto;
+			margin: 0;
+			border: none;
+			color: white;
+			fill: #ccc;
+			background: none;
+			&:hover {
+				fill: white;
+				background: none;
+			}
 		}
 	}
 }

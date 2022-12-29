@@ -110,6 +110,15 @@ export default function Header() {
 							Contact
 						</Link>
 					</li>
+					<li className={styles.dropBtn}>
+						<button className={styles.hamburger}>
+							<svg viewBox="0 0 100 80" width="40" height="40">
+								<rect width="100" height="15" rx="8"></rect>
+								<rect y="35" width="100" height="15" rx="8"></rect>
+								<rect y="70" width="100" height="15" rx="8"></rect>
+							</svg>
+						</button>
+					</li>
 				</ul>
 			</nav>
 			<header onMouseMove={handleMouseMove} className={styles.wrapper}></header>
