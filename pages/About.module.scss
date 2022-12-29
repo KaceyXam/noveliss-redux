@@ -1,0 +1,15 @@
+.main {
+	margin-block: 4rem;
+	display: flex;
+	flex-direction: column;
+	max-width: 75ch;
+	width: calc(100% - 5rem);
+	margin-inline: auto;
+	line-height: 1.6;
+	font-size: 1.5rem;
+	gap: 1em;
+}
+
+.main p {
+	text-indent: 2rem;
+}
