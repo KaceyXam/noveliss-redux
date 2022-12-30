@@ -70,6 +70,13 @@ select {
 	}
 }
 
+:where(input, textarea) {
+	&:focus {
+		outline: solid 2px vars.$active-selection;
+		outline-offset: 2px;
+	}
+}
+
 // Scrollbar Styling
 /* width */
 ::-webkit-scrollbar {
