@@ -16,7 +16,19 @@ export default function LatestVideo() {
 	);
 
 	if (error) return <div>{error.toString()}</div>;
-	if (!data) return <div>Loading...</div>;
+	if (!data)
+		return (
+			<HomeCard
+				imgSrc="/images/maverick-hunters-vinyl.webp"
+				imgAlt="Loading..."
+			>
+				<h2>Latest Podcast</h2>
+				<h3>Loading...</h3>
+				<a href="#" target="_blank" rel="noreferrer" className="a_button">
+					Watch on Youtube
+				</a>
+			</HomeCard>
+		);
 	const { title, thumbnail, url } = data;
 	return (
 		<HomeCard imgSrc={thumbnail} imgAlt={title}>
