@@ -97,3 +97,7 @@ select {
 ::-webkit-scrollbar-thumb:hover {
 	background: #999;
 }
+
+::selection {
+	background-color: vars.$active-selection;
+}
