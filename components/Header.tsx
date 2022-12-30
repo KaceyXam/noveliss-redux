@@ -3,8 +3,67 @@ import { useEffect, useState, MouseEvent } from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
 
+function NavLinks() {
+	const router = useRouter();
+
+	return (
+		<>
+			<li className={styles.navElement}>
+				<Link
+					href="/"
+					className={`${router.pathname === "/" ? `${styles.active}` : ""}`}
+				>
+					Home
+				</Link>
+			</li>
+			<li className={styles.navElement}>
+				<Link
+					href="/about"
+					className={`${
+						router.pathname === "/about" ? `${styles.active}` : ""
+					}`}
+				>
+					About
+				</Link>
+			</li>
+			<li className={styles.navElement}>
+				<Link
+					href="/music"
+					className={`${
+						router.pathname === "/music" ? `${styles.active}` : ""
+					}`}
+				>
+					Music
+				</Link>
+			</li>
+			<li className={styles.navElement}>
+				<Link
+					href="/store"
+					className={`${
+						router.pathname === "/store" ? `${styles.active}` : ""
+					}`}
+				>
+					Store
+				</Link>
+			</li>
+			<li className={styles.navElement}>
+				<Link
+					href="/contact"
+					className={`${
+						router.pathname === "/contact" ? `${styles.active}` : ""
+					}`}
+				>
+					Contact
+				</Link>
+			</li>
+		</>
+	);
+}
+
 export default function Header() {
 	const router = useRouter();
+
+	const [showDrop, setShowDrop] = useState(false);
 
 	const [mousePosX, setMousePosX] = useState(0);
 	const [scrollPos, setScrollPos] = useState(0);
@@ -62,56 +121,12 @@ export default function Header() {
 							</defs>
 						</svg>
 					</li>
-					<li className={styles.navElement}>
-						<Link
-							href="/"
-							className={`${router.pathname === "/" ? `${styles.active}` : ""}`}
-						>
-							Home
-						</Link>
-					</li>
-					<li className={styles.navElement}>
-						<Link
-							href="/about"
-							className={`${
-								router.pathname === "/about" ? `${styles.active}` : ""
-							}`}
-						>
-							About
-						</Link>
-					</li>
-					<li className={styles.navElement}>
-						<Link
-							href="/music"
-							className={`${
-								router.pathname === "/music" ? `${styles.active}` : ""
-							}`}
-						>
-							Music
-						</Link>
-					</li>
-					<li className={styles.navElement}>
-						<Link
-							href="/store"
-							className={`${
-								router.pathname === "/store" ? `${styles.active}` : ""
-							}`}
-						>
-							Store
-						</Link>
-					</li>
-					<li className={styles.navElement}>
-						<Link
-							href="/contact"
-							className={`${
-								router.pathname === "/contact" ? `${styles.active}` : ""
-							}`}
-						>
-							Contact
-						</Link>
-					</li>
+					<NavLinks />
 					<li className={styles.dropBtn}>
-						<button className={styles.hamburger}>
+						<button
+							onClick={() => setShowDrop(!showDrop)}
+							className={styles.hamburger}
+						>
 							<svg viewBox="0 0 100 80" width="40" height="40">
 								<rect width="100" height="15" rx="8"></rect>
 								<rect y="35" width="100" height="15" rx="8"></rect>
@@ -119,6 +134,9 @@ export default function Header() {
 							</svg>
 						</button>
 					</li>
+				</ul>
+				<ul className={`${styles.dropMenu} ${showDrop && styles.show}`}>
+					<NavLinks />
 				</ul>
 			</nav>
 			<header onMouseMove={handleMouseMove} className={styles.wrapper}></header>
