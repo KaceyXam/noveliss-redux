@@ -31,6 +31,24 @@ export default function Store() {
 				<main className={styles.main}>
 					<LatestItem {...storeContents[0]} />
 					<span className="line" />
+					<section className={styles.frequently}>
+						<div className={styles.bought}>
+							<h3>Frequently purchased together</h3>
+							<div className={styles.items}>
+								<div className="imageWrapper">
+									<Image src="/images/book-of-changes.webp" alt="" fill />
+								</div>
+								<span className="plus" />
+								<div className="imageWrapper">
+									<Image src="/images/book-of-changes.webp" alt="" fill />
+								</div>
+							</div>
+						</div>
+						<div className={styles.addCart}>
+							<p>No Items Selected</p>
+							<button>Add selected items to cart</button>
+						</div>
+					</section>
 				</main>
 			</MainLayout>
 		</>

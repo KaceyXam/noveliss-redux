@@ -6,44 +6,38 @@
 	align-items: center;
 	width: clamp(0px, calc(100% - 5rem), 1400px);
 	margin-inline: auto;
-}
-
-.latestItem {
-	position: relative;
-	display: grid;
-	gap: 1rem;
-	grid-template-columns: 2fr 3fr;
 	margin-top: 4rem;
 }
 
-.latestContent {
+.frequently {
 	display: flex;
-	flex-direction: column;
-	padding: 1em;
-	h2 {
-		font-size: 2rem;
-	}
-	.outStock {
-		text-decoration: underline;
-		font-style: italic;
-		font-size: 0.9rem;
-		color: vars.$border-grey;
-	}
+	width: 100%;
+	gap: 2rem;
+}
+
+.addCart {
+	text-align: center;
+	align-self: flex-end;
+	margin-bottom: 1rem;
 	p {
-		margin-block: 1em;
-		line-height: 1.5;
+		font-weight: 600;
+		margin-bottom: 0.5rem;
 	}
 	button {
-		margin-top: 1rem;
-		width: max(250px, 40%);
-		&.outStockButton {
-			text-decoration: line-through;
-			font-style: italic;
-			font-weight: 700;
-			background-color: rgb(227, 227, 227);
-			color: grey;
-			border-color: grey;
-			cursor: not-allowed;
+		font-weight: 500;
+	}
+}
+
+.bought {
+	text-align: center;
+	.items {
+		display: flex;
+		height: 8rem;
+		gap: 2rem;
+		padding: 1em;
+		align-items: center;
+		div {
+			aspect-ratio: 1 / 1;
 		}
 	}
 }

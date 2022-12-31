@@ -4,11 +4,11 @@
 	position: relative;
 	display: grid;
 	gap: 1rem;
-	grid-template-columns: 2fr 3fr;
-	margin-top: 4rem;
+	grid-template-columns: 2fr 5fr;
 }
 
 .latestContent {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
@@ -29,6 +29,7 @@
 	p {
 		margin-block: 1em;
 		line-height: 1.5;
+		min-height: 4rem;
 	}
 	button {
 		margin-top: 1rem;
