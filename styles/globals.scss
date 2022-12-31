@@ -114,3 +114,10 @@ select {
 	height: 100%;
 	position: relative;
 }
+
+.line {
+	margin-block: 2rem;
+	background-color: vars.$border-grey;
+	height: 0.1rem;
+	width: 100%;
+}
