@@ -1,0 +1,49 @@
+@use "../styles/globalvars.scss" as vars;
+
+.main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: clamp(0px, calc(100% - 5rem), 1400px);
+	margin-inline: auto;
+}
+
+.latestItem {
+	position: relative;
+	display: grid;
+	gap: 1rem;
+	grid-template-columns: 2fr 3fr;
+	margin-top: 4rem;
+}
+
+.latestContent {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	h2 {
+		font-size: 2rem;
+	}
+	.outStock {
+		text-decoration: underline;
+		font-style: italic;
+		font-size: 0.9rem;
+		color: vars.$border-grey;
+	}
+	p {
+		margin-block: 1em;
+		line-height: 1.5;
+	}
+	button {
+		margin-top: 1rem;
+		width: max(250px, 40%);
+		&.outStockButton {
+			text-decoration: line-through;
+			font-style: italic;
+			font-weight: 700;
+			background-color: rgb(227, 227, 227);
+			color: grey;
+			border-color: grey;
+			cursor: not-allowed;
+		}
+	}
+}

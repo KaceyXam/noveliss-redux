@@ -108,3 +108,9 @@ select {
 ::selection {
 	background-color: vars.$active-selection;
 }
+
+.imageWrapper {
+	width: 100%;
+	height: 100%;
+	position: relative;
+}
