@@ -1,5 +1,9 @@
 @use "../styles/globalvars.scss" as vars;
 
+.footerMain *::selection {
+	background-color: vars.$active-footer-selection;
+}
+
 .footerMain {
 	display: flex;
 	flex-direction: column;

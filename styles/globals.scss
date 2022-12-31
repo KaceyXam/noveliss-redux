@@ -67,6 +67,7 @@ select {
 		border-color: vars.$main-bg;
 		background-color: vars.$main-bg;
 		color: white;
+		font-weight: bold;
 	}
 }
 
@@ -80,7 +81,7 @@ select {
 // Scrollbar Styling
 /* width */
 ::-webkit-scrollbar {
-	width: 8px;
+	width: 0.5rem;
 }
 
 /* Track */
@@ -96,6 +97,12 @@ select {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #999;
+}
+
+// FireFox Scrollbar
+* {
+	scrollbar-color: #888 #222;
+	scrollbar-width: thin;
 }
 
 ::selection {
