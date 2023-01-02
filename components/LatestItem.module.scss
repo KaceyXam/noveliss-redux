@@ -41,6 +41,11 @@
 			color: grey;
 			border-color: grey;
 			cursor: not-allowed;
+			&:hover {
+				font: inherit;
+				text-decoration: line-through;
+				font-style: italic;
+			}
 		}
 	}
 }
