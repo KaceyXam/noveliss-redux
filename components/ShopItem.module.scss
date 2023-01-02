@@ -12,6 +12,9 @@
 		min-width: 100px;
 	}
 	button {
+		&:hover {
+			background-color: #71a9ff;
+		}
 		&:disabled {
 			text-decoration: line-through;
 			font-style: italic;

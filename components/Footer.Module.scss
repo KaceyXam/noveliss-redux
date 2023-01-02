@@ -5,6 +5,7 @@
 }
 
 .footerMain {
+	text-align: center;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -12,7 +13,7 @@
 	color: white;
 	padding-block: 3em 5em;
 	gap: 1.5em;
-
+	padding-inline: 1em;
 	.where {
 		font-size: 36px;
 		font-weight: bold;
@@ -21,7 +22,9 @@
 	.socialLinks {
 		list-style-type: none;
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		width: 100%;
+		max-width: 30rem;
+		grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
 		gap: 1em;
 		align-items: flex-end;
 		.social {

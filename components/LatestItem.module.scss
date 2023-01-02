@@ -49,3 +49,18 @@
 		}
 	}
 }
+
+@media (max-width: 1200px) {
+	.latestItem {
+		grid-template-columns: 1fr 1fr;
+	}
+}
+
+@media (max-width: 900px) {
+	.latestItem {
+		grid-template-columns: 1fr;
+		div:not(.latestContent) {
+			aspect-ratio: 4 / 3;
+		}
+	}
+}

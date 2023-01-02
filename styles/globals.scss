@@ -37,9 +37,9 @@ select {
 	font: inherit;
 	text-decoration: none;
 	color: #252525;
+	background-color: vars.$button-bg;
 	font-weight: 600;
-	background-color: #f7f7f7;
-	width: fit-content;
+	width: max-content;
 	padding: 0.5em 1em;
 	border: #252525 solid 1px;
 	border-radius: 0.5em;
@@ -49,12 +49,13 @@ select {
 		cursor: disabled;
 	}
 	&:hover {
-		background-color: #252525;
-		color: #f7f7f7;
+		background-color: vars.$button-bg-hover;
+		color: vars.$light-grey;
 	}
 }
 
 :where(button) {
+	background-color: vars.$button-bg;
 	padding: 0.5em 1em;
 	border: vars.$border-grey solid 2px;
 	border-radius: 0.5em;
@@ -65,7 +66,7 @@ select {
 	transition: 75ms ease-in-out;
 	&:hover {
 		border-color: vars.$main-bg;
-		background-color: vars.$main-bg;
+		background-color: vars.$button-bg-hover;
 		color: white;
 		font-weight: bold;
 	}
@@ -123,30 +124,6 @@ select {
 	background-color: #c2c6cc;
 	height: 0.1rem;
 	width: 100%;
-}
-
-.plus {
-	position: relative;
-	width: 14px;
-}
-
-.plus::before {
-	content: "";
-	position: absolute;
-	background-color: #222;
-	height: 2px;
-	width: 14px;
-	left: -4px;
-}
-
-.plus::after {
-	content: "";
-	position: absolute;
-	background-color: #222;
-	width: 2px;
-	height: 14px;
-	top: -6px;
-	left: 2px;
 }
 
 select {
