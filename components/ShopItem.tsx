@@ -12,11 +12,17 @@ export default function ShopItem(props: storeItem) {
 
 	const shopFormHandle = (e: FormEvent) => {
 		e.preventDefault();
+		if (props.sizes === undefined) {
+			alert(props.name);
+			return;
+		}
 		const chosenSize = size;
-		alert(chosenSize);
+		alert(`${props.name} ${chosenSize[0].toUpperCase() + size.substring(1)}`);
 	};
 
 	const sizes = props.sizes;
+
+	const outOfStock = props.stock === 0;
 
 	return (
 		<form onSubmit={shopFormHandle} className={styles.shopItem}>
@@ -35,7 +41,10 @@ export default function ShopItem(props: storeItem) {
 					})}
 				</select>
 			) : null}
-			<button type="submit">Add to cart: $40.00</button>
+			{outOfStock && <span className={styles.outStock}>Out of stock</span>}
+			<button disabled={outOfStock} type="submit">
+				Add to cart: ${props.price}
+			</button>
 		</form>
 	);
 }

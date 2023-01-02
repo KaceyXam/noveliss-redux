@@ -46,35 +46,9 @@
 	width: clamp(0px, calc(100% - 2rem), 1200px);
 	display: grid;
 	margin-inline: auto;
-	place-items: center;
+	justify-items: center;
+	align-items: flex-start;
 	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
 	gap: 4em;
 	margin-block: 2rem 4rem;
-}
-
-.shopItem {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	gap: 0.5em;
-	width: 100%;
-	max-width: 250px;
-	select,
-	button {
-		width: 90%;
-		min-width: 100px;
-	}
-	select {
-		padding: 0.25em;
-		option {
-			font: inherit;
-		}
-	}
-	div {
-		aspect-ratio: 1 / 1;
-		margin-bottom: 1em;
-		img {
-			border-radius: 0.5em;
-		}
-	}
 }

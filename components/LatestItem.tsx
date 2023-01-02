@@ -16,7 +16,7 @@ export default function LatestItem(props: storeItem) {
 			<div className={styles.latestContent}>
 				<h2>{props.name}</h2>
 				<h3 className={`${props.stock === 0 ? styles.outStock : ""}`}>
-					{props.stock >= 0 ? `${props.stock} left` : "Out of Stock"}
+					{props.stock > 0 ? `${props.stock} left` : "Out of Stock"}
 				</h3>
 				<p>{props.description}</p>
 				<button className={styles.outStockButton} disabled={props.stock === 0}>

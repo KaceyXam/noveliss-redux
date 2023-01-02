@@ -5,10 +5,26 @@
 	gap: 0.5em;
 	width: 100%;
 	max-width: 250px;
+	justify-content: space-around;
 	select,
 	button {
 		width: 90%;
 		min-width: 100px;
+	}
+	button {
+		&:disabled {
+			text-decoration: line-through;
+			font-style: italic;
+			background-color: rgb(227, 227, 227);
+			color: grey;
+			border-color: grey;
+			cursor: not-allowed;
+			&:hover {
+				font: inherit;
+				text-decoration: line-through;
+				font-style: italic;
+			}
+		}
 	}
 	select {
 		padding: 0.25em;
@@ -22,7 +38,12 @@
 		aspect-ratio: 1 / 1;
 		margin-bottom: 1em;
 		img {
-			border-radius: 0.5em;
+			border-radius: 0.25em;
 		}
 	}
+}
+
+.outStock {
+	font-style: italic;
+	font-size: 14px;
 }

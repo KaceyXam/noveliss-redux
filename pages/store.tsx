@@ -19,19 +19,42 @@ const storeContents: storeItem[] = [
 		imageSrc: "/images/book-of-changes.webp",
 	},
 	{
-		name: "RKM 1.0 Bundle",
-		stock: 10000,
+		name: "Maverick Hunters: Vinyl",
+		stock: 1000,
 		price: 50.0,
+		imageSrc: "/images/maverick-hunters-vinyl.webp",
+	},
+	{
+		name: "RKM 2.0 Bundle",
+		stock: 1000,
+		price: 40.0,
+		imageSrc: "/images/rkm-bundle.webp",
+		sizes: ["small", "medium", "large", "xl"],
+	},
+	{
+		name: "Swordcast 50th Episode Tee",
+		stock: 1000,
+		price: 40.0,
+		imageSrc: "/images/rkm-bundle.webp",
+		sizes: ["small", "medium", "large", "xl"],
+	},
+	{
+		name: "RKM 1.0 Bundle",
+		stock: 1000,
+		price: 40.0,
+		imageSrc: "/images/rkm-bundle.webp",
+		sizes: ["small", "medium", "large", "xl"],
+	},
+	{
+		name: "Noveliss Logo Bundle",
+		stock: 1000,
+		price: 40.0,
 		imageSrc: "/images/rkm-bundle.webp",
 		sizes: ["small", "medium", "large", "xl"],
 	},
 ];
 
 export default function Store() {
-	const shopFormHandle = (e: FormEvent) => {
-		e.preventDefault();
-	};
-
 	return (
 		<>
 			<Head>
@@ -42,75 +65,9 @@ export default function Store() {
 					<LatestItem {...storeContents[0]} />
 					<span className="line" />
 					<section className={styles.shopWrapper}>
-						<form onSubmit={shopFormHandle} className={styles.shopItem}>
-							<div className="imageWrapper">
-								<Image
-									src={"/images/rkm-bundle.webp"}
-									alt={"RKM 1.0 Bundle"}
-									fill
-								/>
-							</div>
-							<h3>RKM 1.0 Bundle</h3>
-							<select name="size" id="size">
-								<option value="small">Small</option>
-								<option value="medium">Medium</option>
-								<option value="large">Large</option>
-								<option value="xl">XL</option>
-							</select>
-							<button type="submit">Add to cart: $40.00</button>
-						</form>
-						<ShopItem {...storeContents[1]} />
-						<form onSubmit={shopFormHandle} className={styles.shopItem}>
-							<div className="imageWrapper">
-								<Image
-									src={"/images/rkm-bundle.webp"}
-									alt={"RKM 1.0 Bundle"}
-									fill
-								/>
-							</div>
-							<h3>RKM 1.0 Bundle</h3>
-							<select name="size" id="size">
-								<option value="small">Small</option>
-								<option value="medium">Medium</option>
-								<option value="large">Large</option>
-								<option value="xl">XL</option>
-							</select>
-							<button type="submit">Add to cart</button>
-						</form>
-						<form onSubmit={shopFormHandle} className={styles.shopItem}>
-							<div className="imageWrapper">
-								<Image
-									src={"/images/rkm-bundle.webp"}
-									alt={"RKM 1.0 Bundle"}
-									fill
-								/>
-							</div>
-							<h3>RKM 1.0 Bundle</h3>
-							<select name="size" id="size">
-								<option value="small">Small</option>
-								<option value="medium">Medium</option>
-								<option value="large">Large</option>
-								<option value="xl">XL</option>
-							</select>
-							<button type="submit">Add to cart</button>
-						</form>
-						<form onSubmit={shopFormHandle} className={styles.shopItem}>
-							<div className="imageWrapper">
-								<Image
-									src={"/images/rkm-bundle.webp"}
-									alt={"RKM 1.0 Bundle"}
-									fill
-								/>
-							</div>
-							<h3>RKM 1.0 Bundle</h3>
-							<select name="size" id="size">
-								<option value="small">Small</option>
-								<option value="medium">Medium</option>
-								<option value="large">Large</option>
-								<option value="xl">XL</option>
-							</select>
-							<button type="submit">Add to cart</button>
-						</form>
+						{storeContents.map((item, i) => {
+							return <ShopItem {...item} key={i} />;
+						})}
 					</section>
 				</main>
 			</MainLayout>
