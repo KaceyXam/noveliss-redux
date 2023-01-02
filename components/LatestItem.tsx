@@ -15,13 +15,11 @@ export default function LatestItem(props: storeItem) {
 			</div>
 			<div className={styles.latestContent}>
 				<h2>{props.name}</h2>
-				<h3 className={`${!props.stock.inStock ? styles.outStock : ""}`}>
-					{props.stock.inStock && props.stock.quantity
-						? `${props.stock.quantity} left`
-						: "Out of Stock"}
+				<h3 className={`${props.stock === 0 ? styles.outStock : ""}`}>
+					{props.stock >= 0 ? `${props.stock} left` : "Out of Stock"}
 				</h3>
 				<p>{props.description}</p>
-				<button className={styles.outStockButton}>
+				<button className={styles.outStockButton} disabled={props.stock === 0}>
 					Add to cart: ${props.price}
 				</button>
 			</div>

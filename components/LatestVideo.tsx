@@ -22,7 +22,7 @@ export default function LatestVideo() {
 				imgSrc="/images/maverick-hunters-vinyl.webp"
 				imgAlt="Loading..."
 			>
-				<h2>Latest Podcast</h2>
+				<h2>Latest Video</h2>
 				<h3>Loading...</h3>
 				<a href="#" target="_blank" rel="noreferrer" className="a_button">
 					Watch on Youtube

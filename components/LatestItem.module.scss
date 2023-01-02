@@ -34,10 +34,9 @@
 	button {
 		margin-top: 1rem;
 		width: max(250px, 40%);
-		&.outStockButton {
+		&:disabled {
 			text-decoration: line-through;
 			font-style: italic;
-			font-weight: 700;
 			background-color: rgb(227, 227, 227);
 			color: grey;
 			border-color: grey;

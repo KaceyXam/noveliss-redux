@@ -3,13 +3,11 @@ import type { AppProps } from "next/app";
 
 export type storeItem = {
 	name: string;
-	stock: {
-		inStock: boolean;
-		quantity?: number;
-	};
+	stock: number;
 	description?: string;
 	price: number;
 	imageSrc: string;
+	sizes?: string[];
 };
 
 export default function App({ Component, pageProps }: AppProps) {
