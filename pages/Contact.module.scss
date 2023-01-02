@@ -22,9 +22,7 @@
 	display: flex;
 	gap: 0.2em;
 	flex-direction: column;
-	min-width: 350px;
-	width: 50%;
-	max-width: 550px;
+	width: clamp(350px, 50%, 550px);
 	h2 {
 		text-align: center;
 	}
