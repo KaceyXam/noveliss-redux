@@ -28,16 +28,6 @@ function NavLinks() {
 			</li>
 			<li className={styles.navElement}>
 				<Link
-					href="/music"
-					className={`${
-						router.pathname === "/music" ? `${styles.active}` : ""
-					}`}
-				>
-					Music
-				</Link>
-			</li>
-			<li className={styles.navElement}>
-				<Link
 					href="/store"
 					className={`${
 						router.pathname === "/store" ? `${styles.active}` : ""
