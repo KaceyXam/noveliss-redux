@@ -8,6 +8,7 @@ export type storeItem = {
 	price: number;
 	imageSrc: string;
 	sizes?: string[];
+	colors?: string[];
 };
 
 export default function App({ Component, pageProps }: AppProps) {

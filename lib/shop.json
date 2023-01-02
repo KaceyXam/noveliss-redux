@@ -1,0 +1,51 @@
+[
+	{
+		"name": "Book of Changes: Vinyl",
+		"stock": 0,
+		"price": 50.0,
+		"description": "The first collaboration album between Noveliss and Dixon Hill comes in the form of a concept album based on the I Ching or Book of Changes. The track list was constructed using the ancient text and its overall theme stems from the wisdom therein. Conceived, written, and recorded in isolation, Book of Changes sets Noveliss as a hermetic sage seeking seeking balance and enlightenment over Dixon Hill's ethereal musical backdrops. Dixon Hill used samples, live instruments, and field recordings to create the sonic template for this record. Each song transitions smoothly from one to another using melodic elements and natural sounds to tether the songs together for a cohesive listening experience.",
+		"imageSrc": "/images/merch/book-of-changes.webp"
+	},
+	{
+		"name": "Maverick Hunters: Vinyl",
+		"stock": 1000,
+		"price": 50.0,
+		"imageSrc": "/images/merch/maverick-hunters-vinyl.webp"
+	},
+	{
+		"name": "RKM 2.0 Bundle",
+		"stock": 1000,
+		"price": 40.0,
+		"imageSrc": "/images/merch/rkm-bundle-2.0.webp",
+		"sizes": ["small", "medium", "large", "xl"]
+	},
+	{
+		"name": "Swordcast 50th Episode Tee",
+		"stock": 1000,
+		"price": 30.0,
+		"imageSrc": "/images/merch/swordcast-50th-episode-tee.webp",
+		"sizes": ["small", "medium", "large", "xl"]
+	},
+	{
+		"name": "RKM 1.0 Bundle",
+		"stock": 1000,
+		"price": 40.0,
+		"imageSrc": "/images/merch/rkm-bundle.webp",
+		"sizes": ["small", "medium", "large", "xl"]
+	},
+	{
+		"name": "Noveliss Logo Bundle",
+		"stock": 1000,
+		"price": 40.0,
+		"imageSrc": "/images/merch/noveliss-logo-bundle.webp",
+		"sizes": ["small", "medium", "large", "xl"]
+	},
+	{
+		"name": "Test Item",
+		"stock": 1000,
+		"price": 1800.0,
+		"imageSrc": "/images/merch/mic-hokage-bundle.webp",
+		"sizes": ["medium", "large", "xl"],
+		"colors": ["white", "black"]
+	}
+]
