@@ -14,10 +14,7 @@ export default function LatestPodcast() {
 	if (error) return <div>{error.toString()}</div>;
 	if (!data)
 		return (
-			<HomeCard
-				imgSrc="/images/maverick-hunters-vinyl.webp"
-				imgAlt="Loading..."
-			>
+			<HomeCard imgSrc="/" imgAlt="Loading...">
 				<h2>Latest Podcast</h2>
 				<h3>Loading...</h3>
 				<a href="#" target="_blank" rel="noreferrer" className="a_button">
