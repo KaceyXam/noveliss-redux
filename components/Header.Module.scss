@@ -1,7 +1,31 @@
 @use "../styles/globalvars.scss" as vars;
 
 .wrapper {
-	// TODO Hero Element
+	height: 90vh;
+	min-height: 40rem;
+	position: relative;
+	isolation: isolate;
+	display: grid;
+	place-items: center;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 4rem;
+		background: vars.$main-bg;
+		bottom: 0%;	
+		z-index: 1;
+	}
+	div, .title {
+		grid-column: 1;
+		grid-row: 1;
+	}
+	.title {
+		z-index: 2;
+		&:is(h1) {
+			opacity: 0;
+		}
+	}
 }
 
 .mainNav {
