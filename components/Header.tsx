@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import Image from "next/image";
 import SvgLoader from './svg/SvgLoader';
+import Wave from "./header/Wave";
 
 function NavLinks() {
 	const router = useRouter();
@@ -12,7 +13,7 @@ function NavLinks() {
 		<>
 			<li className={styles.navElement}>
 				<Link
-					href="/"
+					href="/#content"
 					className={`${router.pathname === "/" ? `${styles.active}` : ""}`}
 				>
 					Home
@@ -20,7 +21,7 @@ function NavLinks() {
 			</li>
 			<li className={styles.navElement}>
 				<Link
-					href="/about"
+					href="/about#content"
 					className={`${
 						router.pathname === "/about" ? `${styles.active}` : ""
 					}`}
@@ -30,7 +31,7 @@ function NavLinks() {
 			</li>
 			<li className={styles.navElement}>
 				<Link
-					href="/store"
+					href="/store#content"
 					className={`${
 						router.pathname === "/store" ? `${styles.active}` : ""
 					}`}
@@ -40,7 +41,7 @@ function NavLinks() {
 			</li>
 			<li className={styles.navElement}>
 				<Link
-					href="/contact"
+					href="/contact#content"
 					className={`${
 						router.pathname === "/contact" ? `${styles.active}` : ""
 					}`}
@@ -104,15 +105,7 @@ export default function Header() {
 					<NavLinks />
 				</ul>
 			</nav>
-			<header className={styles.wrapper}>
-				<h1 className={styles.title}>Noveliss</h1>
-				<div className={styles.title} aria-hidden>
-					<SvgLoader height={60} fill="white" />
-				</div>
-				<div className="imageWrapper">
-					<Image src="/images/paralaxx/noveliss-header-full.webp" alt="Hero Image" fill	 />
-				</div>
-			</header>
+			<Wave />
 		</>
 	);
 }

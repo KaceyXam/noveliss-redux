@@ -1,0 +1,47 @@
+@use "../../styles/globalvars.scss" as vars;
+
+.wrapper {
+	height: 90vh;
+	min-height: 40rem;
+	position: relative;
+	isolation: isolate;
+	display: grid;
+	place-items: center;
+	&::after {
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 3rem;
+		background: vars.$main-bg;
+	  bottom: calc(0% - 1.5rem);
+		z-index: 1;
+	}
+	div, .title {
+		grid-column: 1;
+		grid-row: 1;
+	}
+  div:not(.title) {
+    grid-row: 1 / 3;
+    background-image: 
+      linear-gradient(to bottom, hsl(200, 100, 90, 10%), hsl(200, 100, 60, 20%)),
+      url("/images/wave/wave-bg.webp")  
+    ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    img {
+      object-position: 50% bottom;
+      max-width: 1400px;
+      left: auto !important;
+    }
+  }
+	.title {
+		z-index: 2;
+    svg {
+      fill: vars.$main-bg;
+    }
+		&:is(h1) {
+			opacity: 0;
+		}
+	}
+}
+

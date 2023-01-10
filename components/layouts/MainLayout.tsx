@@ -12,6 +12,7 @@ export default function MainLayout({ children }: { children: ReactNode }) {
 				<link rel="icon" href="/favicon.png" />
 			</Head>
 			<Header />
+			<div id="content" />
 			{children}
 			<Footer />
 		</>

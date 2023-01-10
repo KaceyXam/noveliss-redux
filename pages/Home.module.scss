@@ -4,7 +4,7 @@
 	max-width: 1100px;
 	margin-inline: auto;
 	gap: 6rem;
-	margin-block: 4rem;
+	margin-block: 6rem 4rem;
 	:nth-child(odd):not(div, h2, h3, a) {
 		align-self: flex-start;
 	}
