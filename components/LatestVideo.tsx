@@ -18,7 +18,7 @@ export default function LatestVideo() {
 	if (error) return <div>{error.toString()}</div>;
 	if (!data)
 		return (
-			<HomeCard imgSrc="/" imgAlt="Loading...">
+			<HomeCard imgSrc="/images/loading.webp" imgAlt="Loading...">
 				<h2>Latest Video</h2>
 				<h3>Loading...</h3>
 				<a href="#" target="_blank" rel="noreferrer" className="a_button">

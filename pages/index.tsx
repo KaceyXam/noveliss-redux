@@ -1,7 +1,6 @@
 import Head from "next/head";
 import MainLayout from "../components/layouts/MainLayout";
 import styles from "./Home.module.scss";
-import Image from "next/image";
 import LatestVideo from "../components/LatestVideo";
 import LatestPodcast from "../components/LatestPodcast";
 

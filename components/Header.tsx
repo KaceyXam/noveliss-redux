@@ -2,7 +2,6 @@ import styles from "./Header.module.scss";
 import { useEffect, useState} from "react";
 import Link from "next/link";
 import { useRouter } from "next/router";
-import Image from "next/image";
 import SvgLoader from './svg/SvgLoader';
 import Wave from "./header/Wave";
 

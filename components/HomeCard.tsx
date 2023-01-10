@@ -11,7 +11,9 @@ type Props = {
 export default function HomeCard({ children, imgSrc, imgAlt }: Props) {
 	return (
 		<section className={styles.latest}>
-			<Image src={imgSrc} width={488} height={275} alt={imgAlt} />
+			<div className="imageWrapper">
+				<Image src={imgSrc}  alt={imgAlt} fill />
+			</div>
 			<div className={styles.latestTitle}>{children}</div>
 		</section>
 	);
