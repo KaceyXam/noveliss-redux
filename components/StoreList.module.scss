@@ -1,0 +1,48 @@
+@use "../styles/globalvars.scss" as vars;
+
+// TODO Make the cart modal look good
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 1em;
+	padding: 1em;
+	max-width: 500px;
+	list-style-type: none;
+	background: white;
+	max-height: 60vh;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+.listItem {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: 0.5em;
+	text-transform: capitalize;
+	h3 {
+		margin: 0;
+		padding: 0;
+		grid-column: 1 / 3;
+		grid-row: 1;
+	}
+	.amount {
+		grid-row: 1;
+		grid-column: 3;
+	}
+	.price {
+		grid-row: 1;
+		grid-column: 4;
+	}
+	input {
+		width: 4rem;
+		text-align: end;
+		padding-inline: 0.5em;
+	}
+	button {
+		grid-column: 1 / -1;
+		&:hover {
+			background: red;
+		}
+	}
+}

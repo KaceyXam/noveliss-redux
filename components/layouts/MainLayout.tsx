@@ -1,9 +1,13 @@
 import Head from "next/head";
-import { ReactNode } from "react";
+import { ReactNode, useState } from "react";
 import Footer from "../Footer";
 import Header from "../Header";
+import Modal from "../Modal";
+import StoreList from "../StoreList";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
+	const [showCart, setShowCart] = useState(false);
+
 	return (
 		<>
 			<Head>
@@ -14,6 +18,14 @@ export default function MainLayout({ children }: { children: ReactNode }) {
 			<Header />
 			<div id="content" />
 			{children}
+			<button className="cartBtn" onClick={() => setShowCart(() => !showCart)}>
+				Cart
+			</button>
+			{showCart && (
+				<Modal toggleFunc={() => setShowCart(() => !showCart)}>
+					This is some content
+				</Modal>
+			)}
 			<Footer />
 		</>
 	);

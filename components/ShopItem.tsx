@@ -2,8 +2,12 @@ import { FormEvent, useState } from "react";
 import styles from "./ShopItem.module.scss";
 import Image from "next/image";
 import type { storeItem } from "../pages/_app";
+import { useDispatch, } from "react-redux";
+import { addElement, } from "../store/storeSlice"
+import {shopItemType} from "../store/store"
 
 export default function ShopItem(props: storeItem) {
+	const dispatch = useDispatch();
 	const [size, setSize] = useState(props.sizes ? props.sizes[0] : undefined);
 	const [color, setColor] = useState(
 		props.colors ? props.colors[0] : undefined
@@ -19,22 +23,29 @@ export default function ShopItem(props: storeItem) {
 	const shopFormHandle = (e: FormEvent) => {
 		e.preventDefault();
 		if (size === undefined) {
-			alert(props.name);
-			return;
+			dispatch(addElement({
+				name: props.name,
+				price: props.price,
+				quantity: 1,
+			}));
 		}
 		const chosenSize = size;
 		if (color === undefined) {
-			alert(
-				`${props.name} ${chosenSize[0].toUpperCase() + chosenSize.substring(1)}`
-			);
-			return;
+			dispatch(addElement({
+				name: props.name,
+				price: props.price,
+				quantity: 1,
+				size: chosenSize
+			}));
 		}
 		const chosenColor = color;
-		alert(
-			`${props.name} ${chosenSize[0].toUpperCase() + chosenSize.substring(1)} ${
-				chosenColor[0].toUpperCase() + chosenColor.substring(1)
-			}`
-		);
+		dispatch(addElement({
+			name: props.name,
+			price: props.price,
+			quantity: 1,
+			size: chosenSize,
+			color: chosenColor
+		}));
 	};
 
 	const sizes = props.sizes;

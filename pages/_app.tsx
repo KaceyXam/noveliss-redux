@@ -1,5 +1,6 @@
 import "../styles/globals.scss";
 import type { AppProps } from "next/app";
+import {wrapper} from "../store/store";
 
 export type storeItem = {
 	name: string;
@@ -11,6 +12,8 @@ export type storeItem = {
 	colors?: string[];
 };
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
 	return <Component {...pageProps} />;
 }
+
+export default wrapper.withRedux(App);

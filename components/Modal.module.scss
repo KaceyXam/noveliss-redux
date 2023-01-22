@@ -1,0 +1,24 @@
+.modal {
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	background: white;
+	button {
+		max-width: 3rem;
+		align-self: center;
+	}
+}
+
+.modalWrap {
+	position: fixed;
+	display: grid;
+	place-content: center;
+	inset: 0;
+	background-color: #2222;
+}
+
+.cartTitle {
+	font-size: 2rem;
+	text-align: center;
+	font-weight: 700;
+}
