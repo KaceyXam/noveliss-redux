@@ -3,10 +3,15 @@
 // TODO Make the cart modal look good
 
 .list {
+	border: solid 2px vars.$border-grey;
+	border-radius: .5em;
+	margin-block: .5em;
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
 	padding: 1em;
+	width: 100%;
+	min-width: 300px;
 	max-width: 500px;
 	list-style-type: none;
 	background: white;
@@ -35,9 +40,8 @@
 		grid-column: 4;
 	}
 	input {
-		width: 4rem;
+		max-width: 6rem;
 		text-align: end;
-		padding-inline: 0.5em;
 	}
 	button {
 		grid-column: 1 / -1;

@@ -39,7 +39,7 @@ function StoreListItem({
 			<h3>{value.name}</h3>
 			<span className={styles.amount}>
 				<label htmlFor="quantity">Amount: </label>
-				<input id="quantity" value={value.quantity} onChange={handleQuantity} />
+				<input id="quantity" type="number" value={value.quantity} onChange={handleQuantity} />
 			</span>
 			<div className={styles.price}>
 				${(value.price * value.quantity).toFixed(2)}

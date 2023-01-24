@@ -1,12 +1,15 @@
 import Head from "next/head";
 import { ReactNode, useState } from "react";
+import { useSelector } from "react-redux";
 import Footer from "../Footer";
 import Header from "../Header";
 import Modal from "../Modal";
-import StoreList from "../StoreList";
+import { selectedList } from "../../store/storeSlice";
 
 export default function MainLayout({ children }: { children: ReactNode }) {
 	const [showCart, setShowCart] = useState(false);
+
+	const storeState = useSelector(selectedList);
 
 	return (
 		<>
@@ -18,9 +21,11 @@ export default function MainLayout({ children }: { children: ReactNode }) {
 			<Header />
 			<div id="content" />
 			{children}
-			<button className="cartBtn" onClick={() => setShowCart(() => !showCart)}>
-				Cart
-			</button>
+			{storeState && (
+				<button className="cartBtn" onClick={() => setShowCart(() => !showCart)}>
+					Cart
+				</button>
+			)}
 			{showCart && (
 				<Modal toggleFunc={() => setShowCart(() => !showCart)}>
 					This is some content

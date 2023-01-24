@@ -1,8 +1,13 @@
+@use "../styles/globalvars.scss" as vars;
+
 .modal {
+	z-index: 99999;
+	isolation: isolate;
 	display: flex;
 	flex-direction: column;
 	padding: 1em;
 	background: white;
+	border-radius: .5em;
 	button {
 		max-width: 3rem;
 		align-self: center;

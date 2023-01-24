@@ -4,8 +4,6 @@
 	height: 90vh;
 	min-height: 40rem;
 	position: relative;
-	z-index: 2;
-	isolation: isolate;
 	display: grid;
 	place-items: center;
 	&::after {
@@ -15,7 +13,6 @@
 		height: 3rem;
 		background: vars.$main-bg;
 	  bottom: calc(0% - 1.5rem);
-		z-index: 1;
 	}
 	div, .title {
 		grid-column: 1;
