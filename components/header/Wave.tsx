@@ -16,6 +16,12 @@ export default function Wave() {
           fill 
         />
       </div>
+      <Image 
+        src="/images/wave/wave-element.webp" 
+        alt="Hero Image" 
+        className={styles.waveElement}
+        fill 
+      />
     </header>
   )
 }

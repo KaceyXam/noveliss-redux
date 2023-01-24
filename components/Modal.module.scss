@@ -15,6 +15,7 @@
 }
 
 .modalWrap {
+	z-index: 9999999;
 	position: fixed;
 	display: grid;
 	place-content: center;
