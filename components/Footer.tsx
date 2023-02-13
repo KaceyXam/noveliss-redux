@@ -25,7 +25,7 @@ function SocialLinks() {
 				<a
 					href="https://www.youtube.com/@Noveliss"
 					target="_blank"
-					rel="norefferer"
+					rel="noreferrer"
 				>
 					<svg
 						width="45"
@@ -62,7 +62,7 @@ function SocialLinks() {
 				<a
 					href="https://www.youtube.com/@Noveliss"
 					target="_blank"
-					rel="norefferer"
+					rel="noreferrer"
 				>
 					<svg
 						width="46"
@@ -87,7 +87,7 @@ function SocialLinks() {
 				<a
 					href="https://www.youtube.com/@Noveliss"
 					target="_blank"
-					rel="norefferer"
+					rel="noreferrer"
 				>
 					<svg
 						width="46"
@@ -125,7 +125,7 @@ function SocialLinks() {
 				<a
 					href="https://www.youtube.com/@Noveliss"
 					target="_blank"
-					rel="norefferer"
+					rel="noreferrer"
 				>
 					<svg
 						width="45"

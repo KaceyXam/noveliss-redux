@@ -1,7 +1,7 @@
 import { NextApiRequest } from "next";
 import { NextApiResponse } from "next";
 
-export default async (req: NextApiRequest, res: NextApiResponse) => {
+const youtubeApi = async (req: NextApiRequest, res: NextApiResponse) => {
 	const key = process.env.YOUTUBE_API_KEY;
 
 	const response = await fetch(
@@ -17,3 +17,5 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 		url: `https://www.youtube.com/watch?v=${jsonSnippet.resourceId.videoId}`,
 	});
 };
+
+export default youtubeApi;
