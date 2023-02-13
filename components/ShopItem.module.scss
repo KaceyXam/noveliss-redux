@@ -28,6 +28,9 @@
 				font-style: italic;
 			}
 		}
+		&:active {
+			animation: test-animation 300ms ease-in-out;
+		}
 	}
 	select {
 		padding: 0.25em;
@@ -49,4 +52,18 @@
 .outStock {
 	font-style: italic;
 	font-size: 14px;
+}
+
+@keyframes test-animation {
+	0% {
+		background-color: rgb(16, 212, 94);
+		outline: black 1px solid;
+		outline-offset: 0;
+	}
+
+	100% {
+		background-color: #71a9ff;
+		outline-offset: 10px;
+		outline-color: transparent;
+	}
 }
