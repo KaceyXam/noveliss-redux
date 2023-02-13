@@ -8,11 +8,22 @@ export default function StoreList() {
 	const storeState = useSelector(selectedList);
 
 	return (
-		<ul className={styles.list}>
-			{storeState.map((value, index) => (
-				<StoreListItem value={value} index={index} key={index} />
-			))}
-		</ul>
+		<table className={styles.list}>
+			<thead>
+				<tr>
+					<td>Item Name:</td>
+					<td>Quantity:</td>
+					<td>Size:</td>
+					<td>Color:</td>
+					<td>Price:</td>
+				</tr>
+			</thead>
+			<tbody>
+				{storeState.map((value, index) => (
+					<StoreListItem value={value} index={index} key={index} />
+				))}
+			</tbody>
+		</table>
 	);
 }
 
@@ -35,20 +46,24 @@ function StoreListItem({
 	};
 
 	return (
-		<li className={styles.listItem}>
-			<h3>{value.name}</h3>
-			<span className={styles.amount}>
-				<label htmlFor="quantity">Amount: </label>
-				<input id="quantity" type="number" value={value.quantity} onChange={handleQuantity} />
-			</span>
-			<div className={styles.price}>
+		<tr className={styles.listItem}>
+			<td>{value.name}</td>
+			<td className={styles.amount}>
+				<input
+					id="quantity"
+					type="number"
+					value={value.quantity}
+					onChange={handleQuantity}
+				/>
+			</td>
+			<td>{value.size}</td>
+			<td>{value.color}</td>
+			<td className={styles.price}>
 				${(value.price * value.quantity).toFixed(2)}
-			</div>
-			<div>{value.size}</div>
-			<div>{value.color}</div>
-			<button onClick={() => dispatch(removeElement(index))}>
-				Remove Item
-			</button>
-		</li>
+			</td>
+			<td className={styles.removeButton}>
+				<button onClick={() => dispatch(removeElement(index))}>X</button>
+			</td>
+		</tr>
 	);
 }

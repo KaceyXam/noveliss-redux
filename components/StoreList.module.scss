@@ -6,47 +6,48 @@
 	border: solid 2px vars.$border-grey;
 	border-radius: 0.5em;
 	margin-block: 0.5em;
-	display: flex;
-	flex-direction: column;
-	gap: 1em;
 	padding: 1em;
 	width: 100%;
-	min-width: 300px;
-	max-width: 500px;
+	min-width: 30vw;
 	list-style-type: none;
 	background: white;
 	max-height: 60vh;
 	overflow-y: scroll;
 	overflow-x: hidden;
+	text-align: start;
+	thead {
+		tr {
+			td {
+				text-align: start;
+				font-weight: bold;
+			}
+		}
+	}
 }
 
 .listItem {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 0.5em;
 	text-transform: capitalize;
-	h3 {
-		margin: 0;
-		padding: 0;
-		grid-column: 1 / 3;
-		grid-row: 1;
-	}
-	.amount {
-		grid-row: 1;
-		grid-column: 3;
-	}
-	.price {
-		grid-row: 1;
-		grid-column: 4;
-	}
 	input {
 		max-width: 6rem;
+		min-width: auto;
+		width: 100%;
 		text-align: end;
 	}
-	button {
-		grid-column: 1 / -1;
-		&:hover {
-			background: red;
+	.removeButton {
+		text-align: end;
+		button {
+			border: none;
+			padding: 0.25em;
+			background: none;
+			border-radius: 999vmax;
+			width: 100%;
+			max-width: none;
+			min-width: auto;
+			align-self: flex-end;
+			font-weight: bold;
+			&:hover {
+				background: red;
+			}
 		}
 	}
 }
