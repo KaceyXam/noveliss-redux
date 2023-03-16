@@ -11,7 +11,7 @@ type YoutubeInfo = {
 export default function LatestPodcast() {
 	const { data, error } = useSWR<YoutubeInfo>("/api/youtubePodcast", fetcher);
 
-	if (error) return <div>{error.toString()}</div>;
+	if (error) return <div>{}</div>;
 	if (!data)
 		return (
 			<HomeCard imgSrc="/images/loading.webp" imgAlt="Loading...">
